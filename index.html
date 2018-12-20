@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>ごきげんよう！</title>
+  <style type="text/css">
+    body {
+      font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+      padding: 0;
+      margin: 0;
+      background: url(index-bg.png) repeat 0 0;
+
+      background: url(index-bg.png) repeat 0 0, -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      background: url(index-bg.png) repeat 0 0, -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      background: url(index-bg.png) repeat 0 0, radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+
+    }
+
+    .bg {
+      width: 100%;
+      height: 100%;
+      min-width: 300px;
+      position: absolute;
+      background: #361a65;
+      background: -moz-radial-gradient(center, ellipse cover, rgba(162, 130, 221, .6) 5%, rgba(54, 26, 101, .4) 80%);
+      /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(162, 130, 221, .6) 5%, rgba(54, 26, 101, .4) 80%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, rgba(162, 130, 221, .6) 5%, rgba(54, 26, 101, .4) 80%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a282dd', endColorstr='#361a65', GradientType=1);
+      /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .txt {
+      text-align: center;
+      width: 100%;
+      min-width: 300px;
+      font-size: 3em;
+      text-shadow: 0px 0px 5px #fff;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      bottom: 30%;
+      margin: auto;
+      height: 200px;
+      border-bottom: 12px double #fff;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+    }
+
+    span.big-font {
+      font-size: 4em;
+      vertical-align: sub;
+    }
+
+    /* @media screen and (max-width:568px) {
+      .txt {
+        font-size: 3em;
+      }
+    }
+
+    @media screen and (max-width:420px) {
+      .txt {
+        font-size: 2em;
+      }
+    } */
+
+    /* 低調選單 */
+
+    .menu {
+      color: rgba(255, 255, 255, .01);
+      position: fixed;
+      font-size: 1.5rem;
+      right: 10px;
+      bottom: 10px;
+      border: 2px solid rgba(255, 255, 255, .01);
+      /* border-radius: 50%; */
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 0.8;
+      text-align: center;
+      z-index: 9;
+    }
+
+    .menu:hover {
+      color: rgba(255, 255, 255, .1);
+      border: 2px solid rgba(255, 255, 255, .1);
+      cursor: pointer;
+    }
+
+    .list-block {
+      background-color: rgba(0, 0, 0, .9);
+      width: 100%;
+      min-width: 300px;
+      height: 100%;
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .main {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      /* width: 40%; */
+      width: 300px;
+      height: 50%;
+      display: table;
+      padding: 0 3%;
+    }
+
+    .title-j3 {
+      color: rgba(255, 255, 255, .9);
+      letter-spacing:4px;
+      /* border-left: 5px solid rgba(201, 179, 240, .6);
+      padding-left: 12px; */
+    }
+
+    .list-ul {
+
+      list-style-type: disc;
+      list-style-position: outside;
+      color: #fff;
+    }
+
+    .list-ul li {
+      margin-bottom: .5rem;
+    }
+
+    .list-ul li a {
+      color: #fff;
+      text-decoration: none;
+      width: 100%;
+      display: block;
+      border-bottom: 1px dotted transparent;
+    }
+
+    .list-ul li a:hover {
+      border-bottom: 1px dotted #c9b3f0;
+      color: #c9b3f0;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="menu">&#8803;</div>
+  <div class="bg">
+    <div class="txt">
+      <!-- ごきげんよう！ -->...
+      <span class="big-font">&#9786;</span>...
+    </div>
+    
+    <div class="list-block">
+      <div class="main">
+	  <h3 class="title-j3">ごきげんよう！</h3>
+       
+      </div>
+    </div>
+  </div>
+  
+</body>
+<!-- 圖表區塊開合 -->
+<style type="text/css">
+  /* Animation */
+
+  .list-block {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: open;
+  }
+
+  @keyframes open {
+    0% {
+      height: 0;
+      background-color: rgba(0, 0, 0, .5);
+    }
+    100% {
+      height: 100%;
+      background-color: rgba(0, 0, 0, .9);
+    }
+  }
+
+  .main {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: open-1;
+  }
+
+  @keyframes open-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".menu").click(function () {
+      $(".list-block").toggle();
+    });
+
+  });
+</script>
+
+</html>
